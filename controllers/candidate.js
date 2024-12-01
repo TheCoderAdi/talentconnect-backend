@@ -1,7 +1,7 @@
 import { Candidate } from "../model/candidate.js";
 import { Job } from "../model/job.js";
-import { Application } from "../model/application.js";
 import { Room } from "../model/room.js";
+import { Application } from "../model/Application.js";
 
 import { asyncError } from "../middlewares/error.js";
 import ErrorHandler from "../utils/error.js";

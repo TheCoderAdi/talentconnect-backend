@@ -1,7 +1,7 @@
 import { Interviewer } from "../model/interviwer.js";
 import { Job } from "../model/job.js";
 import { Candidate } from "../model/candidate.js";
-import { Application } from "../model/application.js";
+import { Application } from "../model/Application.js";
 import { Room } from "../model/room.js";
 
 import fs from "fs";

@@ -434,6 +434,7 @@ export const getRoomIds = asyncError(async (req, res, next) => {
     return {
       roomId: room.roomId,
       jobId: room.jobId,
+      candidateId: room.candidateId
     }
   });
 

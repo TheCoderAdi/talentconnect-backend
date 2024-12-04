@@ -267,7 +267,8 @@ export const generatePdf = asyncError(async (req, res, next) => {
       new ErrorHandler("Please provide all the required fields", 400)
     );
 
-  let prompt = `You are a working agent in the leetcode company. A candidate has requested you to generate a pdf of ${numOfQuestion} programming questions in ${language} language and of ${difficulty} difficulty level. Generate programming questions for the candidate.`;
+  let prompt = `You are a working agent in the leetcode company. A candidate has requested you to generate a pdf of ${numOfQuestion} programming questions in ${language} language and of ${difficulty} difficulty level. Generate programming questions for the candidate.
+  `;
 
   const result = await model.generateContent(prompt);
 

@@ -309,6 +309,7 @@ export const updateJob = asyncError(async (req, res, next) => {
   res.status(200).json({
     success: true,
     message: "Job updated successfully",
+    data: job
   });
 });
 
@@ -341,6 +342,7 @@ export const deleteJob = asyncError(async (req, res, next) => {
   res.status(200).json({
     success: true,
     message: "Job deleted successfully",
+    data: job
   });
 });
 

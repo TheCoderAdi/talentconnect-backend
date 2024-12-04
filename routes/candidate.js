@@ -26,8 +26,8 @@ router.get("/applied-jobs", isAuthenticatedCandidate, getAppliedJobs);
 router.get("/all-jobs", getAllJobs);
 router.post("/apply-job/:jobId", isAuthenticatedCandidate, applyJob);
 router.get("/reminder-meetings", isAuthenticatedCandidate, getReminderMeetings);
-router.get("/generate-pdf", isAuthenticatedCandidate, generatePdf);
-router.get("/generate-quiz", isAuthenticatedCandidate, generateQuiz);
+router.post("/generate-pdf", isAuthenticatedCandidate, generatePdf);
+router.post("/generate-quiz", isAuthenticatedCandidate, generateQuiz);
 router.get("/get-rooms", isAuthenticatedCandidate, getRoomIds)
 router.get("/logout", isAuthenticatedCandidate, logout);
 

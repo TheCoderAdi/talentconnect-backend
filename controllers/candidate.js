@@ -267,7 +267,17 @@ export const generatePdf = asyncError(async (req, res, next) => {
       new ErrorHandler("Please provide all the required fields", 400)
     );
 
-  let prompt = `You are a working agent in the leetcode company. A candidate has requested you to generate a pdf of ${numOfQuestion} programming questions in ${language} language and of ${difficulty} difficulty level. Generate programming questions for the candidate.
+  let prompt = `You are a working agent in the leetcode company. A candidate has requested you to generate a pdf of ${numOfQuestion} programming questions in ${language} language and of ${difficulty} difficulty level and also give the correct answer in the each question end. Generate programming questions for the candidate.
+  Like this take this as a example:
+  prompt: "1. Which statement regarding Java's finalize() method is TRUE?",
+        options: [
+            { label: "a", text: "finalize() is guaranteed to be called before garbage collection..." },
+            { label: "b", text: "finalize() should be relied upon for releasing critical resources..." },
+            { label: "c", text: "Overriding finalize() is generally recommended for resource management..." },
+            { label: "d", text: "finalize() provides a mechanism for final object cleanup..." },
+        ],
+        answer: "d",
+
   `;
 
   const result = await model.generateContent(prompt);

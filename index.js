@@ -113,7 +113,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log(`User disconnected: ${socket.id}`);
     for (const roomId in connections) {
       connections[roomId] = connections[roomId].filter((id) => id !== socket.id);
       if (connections[roomId].length === 0) {
